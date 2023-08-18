@@ -1,0 +1,131 @@
+<html>
+<head>
+</head>
+<style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url(./pictures/girl.gif);
+      background-size: cover;
+    }
+  
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+      
+    .avatar-container {
+      position: absolute;
+      top: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+
+  
+    .twitter-button {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: #1da1f2;
+    }
+  
+    .twitter-button:hover {
+      background-color: #0c87c9;
+    }
+  
+    .youtube-button {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: #ff0000; /* Red color */
+    }
+  
+    .youtube-button:hover {
+      background-color: #cc0000; /* Darker red on hover */
+    }
+
+    .github-button {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: black;
+    }
+
+    .github-button:hover {
+        background-color: black;
+    }
+  
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    .av-text {
+    color: aliceblue;
+    overflow: hidden;
+  }
+
+
+    #audio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 10vh;
+    background-color: transparent;
+  }
+
+  #volume-slider {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  
+  </style>
+
+
+  </style>
+
+<body>
+    <a class="button twitter-button" href="https://twitter.com/ufrz_" target="_blank">My Twitter</a>
+    <a class="button youtube-button" href="https://www.youtube.com/@ufrz" target="_blank">My youtube</a>
+    <a class ="button github-button" href="https://github.com/ufrz" target="_blank">My Github</a>
+    <div class="avatar-container">
+        <img class="avatar" src="./pictures/200w.gif" alt="Avatar">
+        <div class="av-text">
+            <p>I love cybersec 😊</p>
+        </div>
+    </div>
+
+    <div id="audio-container">
+        <audio id="audio" controls autoplay>
+          <source src="./audio/Clutch.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1">
+      </div>
+    
+      <script>
+        const audio = document.getElementById("audio");
+        const volumeSlider = document.getElementById("volume-slider");
+    
+        volumeSlider.addEventListener("input", () => {
+          audio.volume = volumeSlider.value;
+        });
+      </script>
+
+
+
+</body>
+</html>
