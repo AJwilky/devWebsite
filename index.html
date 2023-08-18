@@ -51,11 +51,11 @@
   
     .youtube-button {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-      background-color: #ff0000;
+      background-color: #ff0000; /* Red color */
     }
   
     .youtube-button:hover {
-      background-color: #cc0000; 
+      background-color: #cc0000; /* Darker red on hover */
     }
 
     .github-button {
@@ -124,9 +124,12 @@
           audio.volume = volumeSlider.value;
         });
 
-        audio.addEventListener("ended", () => {
-          audio.currentTime = 0;
-          audio.play();
+
+        
+    audio.addEventListener("ended", () => {
+      audio.currentTime = 0; // Reset playback time to replay
+      audio.play();
+    });
       </script>
 
 
