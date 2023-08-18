@@ -123,6 +123,10 @@
         volumeSlider.addEventListener("input", () => {
           audio.volume = volumeSlider.value;
         });
+
+        audio.addEventListener("ended", () => {
+          audio.currentTime = 0; // Reset playback time to replay
+          audio.play();
       </script>
 
 
