@@ -86,10 +86,6 @@
     background-color: transparent;
   }
 
-  #volume-slider {
-    width: 80%;
-    margin-top: 20px;
-  }
 
   
   </style>
@@ -113,19 +109,11 @@
           <source src="./audio/Clutch.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
-        <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1">
       </div>
     
       <script>
-        const audio = document.getElementById("audio");
-        const volumeSlider = document.getElementById("volume-slider");
-    
-        volumeSlider.addEventListener("input", () => {
-          audio.volume = volumeSlider.value;
-        });
 
-
-        
+  
     audio.addEventListener("ended", () => {
       audio.currentTime = 0; // Reset playback time to replay
       audio.play();
