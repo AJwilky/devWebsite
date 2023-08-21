@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(./pictures/1iSGDT7.gif);
+    background-size: cover;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+    
+  .avatar-container {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+
+  .twitter-button {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #1da1f2;
+  }
+
+  .twitter-button:hover {
+    background-color: #0c87c9;
+  }
+
+  .youtube-button {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ff0000; /* Red color */
+  }
+
+  .youtube-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+  }
+
+  .github-button {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: black;
+  }
+
+  .github-button:hover {
+      background-color: black;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+  }
+
+  .av-text {
+  color: aliceblue;
+  overflow: hidden;
+}
+
+
+  #audio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 10vh;
+  background-color: transparent;
+}
+
+.misc-header {
+  color: turquoise;
+}
+
