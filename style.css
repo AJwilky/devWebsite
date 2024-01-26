@@ -22,18 +22,6 @@ body {
     transition: background-color 0.3s, transform 0.2s;
   }
     
-  .avatar-container {
-    position: absolute;
-    top: 0;
-    text-align: center;
-    width: 100%;
-  }
-
-  .avatar {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-  }
 
 
   .twitter-button {
