@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="style.css" media="screen">
@@ -19,15 +20,23 @@
       
     
       <script>
+        const audio = document.getElementById('audio');
+        const playButton = document.getElementById('play-button');
 
-  
-    audio.addEventListener("ended", () => {
-      audio.currentTime = 0; 
-      audio.play();
-    });
+        playButton.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playButton.innerHTML = '&#9612;&#9612;'; 
+            } else {
+                audio.pause();
+                playButton.innerHTML = '&#9654;'; 
+            }
+        });
+
+        audio.addEventListener('ended', function() {
+            audio.currentTime = 0;
+            playButton.innerHTML = '&#9654;'; 
+        });
       </script>
-
-
-
 </body>
 </html>
