@@ -7,9 +7,9 @@ body {
     margin: 0;
     background-image: url(./pictures/dga69c1-435d2c41-7c0b-4080-8657-6ab7aadd6761.gif);
     background-size: cover;
-  }
+}
 
-  .button {
+.button {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px 0;
@@ -19,61 +19,64 @@ body {
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-    
-
-
-  .twitter-button {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #1da1f2;
-  }
-
-  .twitter-button:hover {
-    background-color: #0c87c9;
-  }
-
-  .youtube-button {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #ff0000; /* Red color */
-  }
-
-  .youtube-button:hover {
-    background-color: #cc0000; /* Darker red on hover */
-  }
-
-  .github-button {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      background-color: black;
-  }
-
-  .github-button:hover {
-      background-color: black;
-  }
-
-  .button:hover {
-    transform: scale(1.05);
-  }
-
-  .av-text {
-  color: aliceblue;
-  overflow: hidden;
+    transition:
+        background-color 0.3s,
+        transform 0.2s;
 }
 
+.twitter-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #1da1f2;
+}
 
-  #audio-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 10vh;
-  background-color: transparent;
+.twitter-button:hover {
+    background-color: #0c87c9;
+}
+
+.youtube-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ff0000; /* Red color */
+}
+
+.youtube-button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+.github-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+}
+
+.github-button:hover {
+    background-color: black;
+}
+
+.discord-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #738adb;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.av-text {
+    color: aliceblue;
+    overflow: hidden;
+}
+
+#audio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 10vh;
+    background-color: transparent;
 }
 
 .misc-header {
-  color: turquoise;
+    color: turquoise;
 }
-
 
 .audio-controls {
     display: flex;
@@ -96,4 +99,4 @@ body {
 
 .audio-controls button:hover {
     background-color: #333;
-  }
+}
