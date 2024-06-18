@@ -1,102 +1,92 @@
 body {
+    font-family: Arial, sans-serif;
+    background: url('k0BgJN9.PNG') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url(./pictures/dga69c1-435d2c41-7c0b-4080-8657-6ab7aadd6761.gif);
-    background-size: cover;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 0;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    transition:
-        background-color 0.3s,
-        transform 0.2s;
-}
-
-.twitter-button {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #1da1f2;
-}
-
-.twitter-button:hover {
-    background-color: #0c87c9;
-}
-
-.youtube-button {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #ff0000; /* Red color */
-}
-
-.youtube-button:hover {
-    background-color: #cc0000; /* Darker red on hover */
-}
-
-.github-button {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: black;
-}
-
-.github-button:hover {
-    background-color: black;
-}
-
-.discord-button {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #738adb;
-}
-
-.button:hover {
-    transform: scale(1.05);
-}
-
-.av-text {
-    color: aliceblue;
     overflow: hidden;
 }
 
-#audio-container {
+.landing-page {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: 10vh;
-    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.5s ease;
 }
 
-.misc-header {
-    color: turquoise;
+.landing-page h1,
+.landing-page p {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.audio-controls {
+.landing-page p {
+    font-size: 1.5em;
+}
+
+.container {
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    transition: opacity 0.5s ease;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: -75px; /* Adjust to position properly */
+}
+
+.username {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.view-count {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px; /* Adjust the margin as needed */
 }
 
-.audio-controls button {
-    width: 50px; /* Adjust the width and height as needed */
+.view-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.link img {
+    width: 50px;
     height: 50px;
-    background-color: black;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.audio-controls button:hover {
-    background-color: #333;
+.link img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
