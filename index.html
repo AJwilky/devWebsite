@@ -1,43 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ufrz Bio Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="rukiiaaa (1).png" type="image/x-icon">
+    <script>
+        // Simple script to increment viewer count
+        document.addEventListener("DOMContentLoaded", function() {
+            let countElement = document.getElementById('viewCount');
+            let count = localStorage.getItem('page_view_count') || 0;
+            count++;
+            localStorage.setItem('page_view_count', count);
+            countElement.textContent = count;
+        });
+
+        function enterSite() {
+            document.getElementById('landingPage').style.opacity = 0;
+            setTimeout(function() {
+                document.getElementById('landingPage').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                document.getElementById('mainContent').style.opacity = 1;
+                document.getElementById('backgroundAudio').play();
+            }, 500);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('landingPage').addEventListener('click', enterSite);
+        });
+    </script>
 </head>
 <body>
-    <a class="button twitter-button" href="https://twitter.com/ufrz_" target="_blank">twitter</a>
-    <a class="button youtube-button" href="https://www.youtube.com/@ufrz" target="_blank">youtube</a>
-    <a class ="button github-button" href="https://github.com/AJwilky" target="_blank">github</a>
-    <a class = "button discord-button" href="https://discord.gg/jehykCACjS" target="_blank">The Dungeon</a>
-
-    <div id="audio-container">
-        <audio id="audio" autoplay>
-          <source src="./audio/Clutch.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <div class="audio-controls">
-          <button id="play-button">&#9654;</button>
-        </div>
-      </div>
-      
+    <div id="landingPage" class="landing-page">
+        <h1>Bankai</h1>
+        <p>Tap anywhere to enter</p>
+    </div>
     
-      <script>
-        const audio = document.getElementById('audio');
-        const playButton = document.getElementById('play-button');
+    <audio id="backgroundAudio" loop>
+        <source src="lilb.mp3" type="audio/mpeg">
+        Your browser does not support this audio element lol
+    </audio>
 
-        playButton.addEventListener('click', function() {
-            if (audio.paused) {
-                audio.play();
-                playButton.innerHTML = '&#9612;&#9612;'; 
-            } else {
-                audio.pause();
-                playButton.innerHTML = '&#9654;'; 
-            }
-        });
-
-        audio.addEventListener('ended', function() {
-            audio.currentTime = 0;
-            playButton.innerHTML = '&#9654;'; 
-        });
-      </script>
+    <div id="mainContent" class="container" style="display: none; opacity: 0;">
+        <div class="profile">
+            <img src="rukia.jpeg" alt="ufrz Profile Picture" class="profile-img">
+            <h1 class="username">ufrz</h1>
+            <div class="view-count">
+                <img src="eye.png" alt="Views" class="view-icon">
+                <span id="viewCount"></span>
+            </div>
+            <div class="links">
+                <a href="https://x.com/ufrz_" class="link"><img src="logo-white.png" alt="Twitter"></a>
+                <a href="https://github.com/AJWilky" class="link"><img src="github-mark.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
