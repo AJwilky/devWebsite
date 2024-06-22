@@ -7,15 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./pictures/rukiiaaa.png" type="image/x-icon">
     <script>
-        // Simple script to increment viewer count
-        document.addEventListener("DOMContentLoaded", function() {
-            let countElement = document.getElementById('viewCount');
-            let count = localStorage.getItem('page_view_count') || 0;
-            count++;
-            localStorage.setItem('page_view_count', count);
-            countElement.textContent = count;
-        });
-
         function enterSite() {
             document.getElementById('landingPage').style.opacity = 0;
             setTimeout(function() {
@@ -46,10 +37,6 @@
         <div class="profile">
             <img src="./pictures/rukia.jpeg" alt="ufrz Profile Picture" class="profile-img">
             <h1 class="username">ufrz</h1>
-            <div class="view-count">
-                <img src="./pictures/eye.png" alt="Views" class="view-icon">
-                <span id="viewCount"></span>
-            </div>
             <div class="links">
                 <a href="https://x.com/ufrz_" class="link"><img src="./pictures/logo-white.png" alt="Twitter"></a>
                 <a href="https://github.com/AJWilky" class="link"><img src="./pictures/github-mark.png" alt="GitHub"></a>
