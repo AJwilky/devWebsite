@@ -59,21 +59,6 @@ body {
     margin: 10px 0;
 }
 
-.view-count {
-    margin: 10px 0;
-    font-size: 1em;
-    color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.view-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
-
 .links {
     display: flex;
     justify-content: space-around;
@@ -89,4 +74,11 @@ body {
 .link img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.quote {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #ccc;
 }
